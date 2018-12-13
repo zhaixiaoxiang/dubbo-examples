@@ -1,7 +1,11 @@
 ## Dubbo调用端hessian反序列化抛NPE问题复现Demo
+## The recurring demo of the bug: The consumer will throw NullPointerException with error stackTrace when provider throw NullPointerException with empty stackTrace
 
 ### 问题简述
+### Description
 很多人在使用dubbo时, dubbo调用端碰到过如下异常, 截止dubbo 2.6.5版本还是有这个问题:
+
+Many developers have encountered the following exception in Dubbo 2.6.5 or previous version:
 ```java
 java.lang.NullPointerException
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -46,3 +50,9 @@ java.lang.NullPointerException
 **注意**:如果是以Run模式执行, 则必须加上-Djava.net.preferIPv4Stack=true, Debug模式无所谓
 
 该问题详细分析文档见https://www.yuque.com/fa902k/id5z6r/sr041v
+
+### How to recur the bug mentioned above
+ - Run main() method of class Provider in hessian-npe-demo-server project
+ - Run or debug main() method of class Consumer in hessian-npe-demo-client project, then you could get the expect stackTrace.
+ 
+**Attention**:If execute in run mode, you must add -Djava.net.preferIPv4Stack=true, but it's not necessary for debug mode. 
