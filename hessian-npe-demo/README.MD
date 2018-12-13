@@ -1,6 +1,6 @@
-##Dubbo调用端hessian反序列化抛NPE问题复现Demo
+## Dubbo调用端hessian反序列化抛NPE问题复现Demo
 
-###问题简述
+### 问题简述
 很多人在使用dubbo时, dubbo调用端碰到过如下异常, 截止dubbo 2.6.5版本还是有这个问题:
 ```java
 java.lang.NullPointerException
@@ -39,7 +39,7 @@ java.lang.NullPointerException
 	at java.lang.Thread.run(Thread.java:748)
 ```
 
-###如何重现该问题
+### 如何重现该问题
 - 在IDEA里以Run模式执行hessian-npe-demo-server工程中的Provider类的main方法
 - 再以Run或Debug模式执行hessian-npe-demo-client工程中的Consumer类的main方法, 稍等几秒, 就会抛出我们期待的异常
 
