@@ -43,4 +43,6 @@ java.lang.NullPointerException
 - 在IDEA里以Run模式执行hessian-npe-demo-server工程中的Provider类的main方法
 - 再以Run或Debug模式执行hessian-npe-demo-client工程中的Consumer类的main方法, 稍等几秒, 就会抛出我们期待的异常
 
+**注意**:如果是以Run模式执行, 则必须加上-Djava.net.preferIPv4Stack=true, Debug模式无所谓
+
 该问题详细分析文档见https://www.yuque.com/fa902k/id5z6r/sr041v
