@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.zxx.dubbo</groupId>
+    <artifactId>hessian-npe-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>hessian-npe-demo</name>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <dubbo.version>2.6.5</dubbo.version>
+        <lombok.version>1.18.4</lombok.version>
+        <netty.version>4.1.16.Final</netty.version>
+        <curator.version>2.12.0</curator.version>
+        <curator-client.version>2.12.0</curator-client.version>
+    </properties>
+
+    <modules>
+        <module>hessian-npe-demo-client</module>
+        <module>hessian-npe-demo-server</module>
+        <module>hessian-npe-demo-api</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<version>${lombok.version}</version>-->
+            <!--</dependency>-->
+        </dependencies>
+    </dependencyManagement>
+
+</project>
