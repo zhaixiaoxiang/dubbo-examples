@@ -10,3 +10,6 @@ devenv
 !NOTICE-BIN
 !LICENSE-BIN
 .DS_Store
+mvnw
+mvnw.cmd
+.mvn/
